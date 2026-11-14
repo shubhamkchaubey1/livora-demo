@@ -256,7 +256,7 @@ const coin=s=>{const g='cg'+(cid++);return `<svg viewBox="0 0 48 48" width="${s|
 const fmtV=n=>n>=1000?(n/1000).toFixed(1).replace('.0','')+'K':n;
 const fmtT=s=>String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
 const fmtD=t=>new Date(t).toLocaleString('en-IN',{day:'numeric',month:'short',hour:'numeric',minute:'2-digit'});
-const av=n=>`img/u${n}.jpg`;
+const av=n=>`u${n}.jpg`;
 
 /* ---------- data ---------- */
 const CATS=['All','Education','Technology','Business','Gaming','Entertainment','Music','Lifestyle','Sports'];
@@ -318,8 +318,8 @@ function render(){
   const b=$('#body');const r=R.route;const u=U();
   if(P&&r!=='player'){}
   $('#sbar').classList.toggle('dk',r==='player');
-  if(r==='login'){b.innerHTML=`<div class="lg-wrap"><div class="lg-hero"><img src="img/login.jpg" alt=""><div class="lg-logo"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div><span class="live">LIVE</span></div><h1>Watch live.<br>Pay only for what you love.</h1><p>Every stream is free for 30 seconds. Then continue with tokens.</p><div class="phf"><select id="cc"><option>+91</option><option>+971</option><option>+1</option><option>+44</option></select><input id="ph" type="tel" inputmode="numeric" maxlength="10" placeholder="Mobile number" value="${R.phone}"></div><div class="err" id="er"></div><button class="big" data-a="sendotp">Continue</button><div class="hint">Demo login · OTP is <b>123456</b></div></div>`;return}
-  if(r==='otp'){b.innerHTML=`<div class="lg-wrap"><div class="lg-hero" style="height:150px"><img src="img/login.jpg" alt=""></div><h1>Verify your number</h1><p>Enter the 6-digit code sent to +91 ${R.phone}.</p><input class="otp" id="otp" inputmode="numeric" maxlength="6" placeholder="······" autofocus><div class="err" id="er"></div><button class="big" data-a="verify">Verify &amp; Continue</button><div class="hint">Demo OTP: <b>123456</b></div></div>`;return}
+  if(r==='login'){b.innerHTML=`<div class="lg-wrap"><div class="lg-hero"><img src="login.jpg" alt=""><div class="lg-logo"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div><span class="live">LIVE</span></div><h1>Watch live.<br>Pay only for what you love.</h1><p>Every stream is free for 30 seconds. Then continue with tokens.</p><div class="phf"><select id="cc"><option>+91</option><option>+971</option><option>+1</option><option>+44</option></select><input id="ph" type="tel" inputmode="numeric" maxlength="10" placeholder="Mobile number" value="${R.phone}"></div><div class="err" id="er"></div><button class="big" data-a="sendotp">Continue</button><div class="hint">Demo login · OTP is <b>123456</b></div></div>`;return}
+  if(r==='otp'){b.innerHTML=`<div class="lg-wrap"><div class="lg-hero" style="height:150px"><img src="login.jpg" alt=""></div><h1>Verify your number</h1><p>Enter the 6-digit code sent to +91 ${R.phone}.</p><input class="otp" id="otp" inputmode="numeric" maxlength="6" placeholder="······" autofocus><div class="err" id="er"></div><button class="big" data-a="verify">Verify &amp; Continue</button><div class="hint">Demo OTP: <b>123456</b></div></div>`;return}
   let html='';
   if(r==='home'){
     const list=STREAMS.filter(s=>R.cat==='All'||s.cat===R.cat);const f=STREAMS[0];
