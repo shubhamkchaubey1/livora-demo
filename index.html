@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Livora – Watch live free for 30 seconds</title>
-<meta name="description" content="Livora is a live streaming app. Watch any live stream free for 30 seconds, then continue with tokens.">
+<title>Livora – Live streaming, pay only for what you love</title>
+<meta name="description" content="Livora is a live streaming app. Jump into live streams and pay only for the moments you love.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Livora – Live streaming with token access">
-<meta property="og:description" content="Discover live streams, watch free for 30 seconds, then unlock with tokens. Interactive app demo.">
-<meta property="og:image" content="og-image.png">
+<meta property="og:description" content="Discover live streams, go live yourself and unlock more with tokens. Interactive app demo.">
+<meta property="og:image" content="https://livora-demo-chi.vercel.app/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#6D4AFF">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%236D4AFF'/%3E%3Cpath d='M24 18v28l22-14z' fill='white'/%3E%3Ccircle cx='48' cy='16' r='5' fill='%23EF4444'/%3E%3C/svg%3E">
@@ -26,7 +26,7 @@ input{font:inherit}
 .credit{position:fixed;left:0;right:0;bottom:10px;text-align:center;font-size:12px;color:#8a90a2}
 .credit a{color:#5b46d6;text-decoration:none;font-weight:600}
 /* phone */
-.phone{position:relative;height:min(860px,calc(100vh - 56px));width:calc(min(860px,100vh - 56px)*390/844);border-radius:52px;background:#0b0c10;padding:11px;box-shadow:0 0 0 2px #2b2e38,0 40px 90px rgba(40,30,110,.35),inset 0 0 0 2px #1b1d25}
+.phone{position:relative;height:min(860px,calc(100vh - 92px));width:calc(min(860px,100vh - 92px)*390/844);border-radius:52px;background:#0b0c10;padding:11px;box-shadow:0 0 0 2px #2b2e38,0 40px 90px rgba(40,30,110,.35),inset 0 0 0 2px #1b1d25}
 .scr{position:relative;width:100%;height:100%;border-radius:42px;overflow:hidden;background:var(--bg);display:flex;flex-direction:column}
 .isl{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:98px;height:28px;border-radius:20px;background:#000;z-index:60}
 .sbar{height:46px;flex:none;display:flex;justify-content:space-between;align-items:flex-end;padding:0 28px 6px;font-size:13px;font-weight:700;background:var(--bg);z-index:5}
@@ -208,12 +208,79 @@ input{font:inherit}
 .rate div{flex:1;background:rgba(255,255,255,.07);border-radius:14px;padding:10px 12px}.rate b{display:block;color:#fff;font-size:14px;margin-top:2px}
 .un{display:flex;gap:10px;align-items:center;margin-top:10px;cursor:pointer}
 .un img{width:96px;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:#222}.un b{font-size:13px;display:block}.un small{color:#9aa0b3;font-size:11.5px}
+
+body{-webkit-user-select:none;user-select:none}input{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none}
+.hero:after{background:linear-gradient(180deg,rgba(8,6,24,.05) 15%,rgba(8,6,24,.55) 55%,rgba(8,6,24,.95))}
+.hero h2{text-shadow:0 2px 12px rgba(0,0,0,.6)}.hero .in{z-index:3}
+.th:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.4),transparent 38%,rgba(0,0,0,.25));pointer-events:none}
+.th .live,.th .vw{z-index:2}
+.card{border-radius:22px;box-shadow:0 4px 18px rgba(40,30,110,.1)}
+.wb{background:linear-gradient(135deg,#7C5CFF,#5B3CF0);color:#fff;box-shadow:0 8px 18px rgba(109,74,255,.35),inset 0 1px 0 rgba(255,255,255,.3)}
+.vg{background:linear-gradient(180deg,rgba(0,0,0,.8),transparent 36%,transparent 58%,rgba(0,0,0,.8))}
+.pc{background:rgba(8,8,18,.82)}.pc,.pc b{text-shadow:0 1px 6px rgba(0,0,0,.7)}
+.vt .live,.vt .vw{box-shadow:0 2px 10px rgba(0,0,0,.4)}
+.nav{border-top:0;box-shadow:0 -8px 24px rgba(40,30,110,.08)}
+.nav .gl{margin-top:-28px;color:#E11D48}
+.nav .gl i{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#FF4D6D,#E11D48 55%,#7C3AED);box-shadow:0 10px 22px rgba(225,29,72,.45),0 0 0 5px #fff;font-style:normal}
+.nav .gl svg{width:24px;height:24px;color:#fff}
+.lg-hero{height:300px!important;border-radius:0 0 38px 38px!important}
+.lg-hero:after{background:linear-gradient(180deg,rgba(20,10,60,.35),transparent 35%,rgba(12,8,40,.8))!important}
+.lg-tags{position:absolute;left:18px;right:18px;bottom:18px;z-index:3;display:flex;gap:8px}
+.lg-tags span{padding:7px 12px;border-radius:14px;background:rgba(255,255,255,.18);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:12px;font-weight:600}
+.lg-wrap h1{font-size:30px}
+.big{background:linear-gradient(135deg,#8B6CFF,#5B3CF0 60%,#4527D6)}
+.stu{padding:0 16px 24px}
+.cam{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/4.2;background:linear-gradient(160deg,#2a1f5c,#0f172a);box-shadow:0 16px 36px rgba(40,30,110,.3)}
+.cam video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
+.cam .ph0{position:absolute;inset:0;display:grid;place-items:center;color:#fff;text-align:center;font-size:13px}
+.cam .ph0 img{width:92px;height:92px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.5);margin-bottom:10px}
+.stu input{width:100%;height:52px;border-radius:14px;border:1.5px solid var(--line);background:#fff;padding:0 14px;font-size:15px;outline:0;margin:14px 0 4px}
+.stu input:focus{border-color:var(--ac)}
+#hl{position:absolute;inset:0;z-index:25;background:#000;color:#fff;overflow:hidden}
+#hl video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
+#hl .fb{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(160deg,#3b1d8f,#0f172a)}
+#hl .fb img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.4)}
+#hl .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.7),transparent 30%,transparent 45%,rgba(0,0,0,.82))}
+.ht{position:absolute;top:12px;left:12px;right:12px;display:flex;align-items:center;gap:8px;z-index:3}
+.hti{position:absolute;top:56px;left:14px;right:14px;z-index:3;font-weight:800;font-size:17px;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+.hch{position:absolute;left:12px;right:70px;bottom:84px;max-height:36%;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;z-index:3}
+.hch div{align-self:flex-start;padding:7px 12px;border-radius:14px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);font-size:13px;animation:fade .3s}
+.hch b{color:#C4B5FD;margin-right:4px}
+.hb{position:absolute;left:12px;right:12px;bottom:16px;display:flex;gap:10px;z-index:3}
+.hb .end{flex:1;height:52px;border-radius:16px;background:linear-gradient(135deg,#FF4D6D,#E11D48);color:#fff;font-weight:800;font-size:15px;box-shadow:0 10px 22px rgba(225,29,72,.45)}
+.hb .rb{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);display:grid;place-items:center}
+.hb .rb svg{width:22px;height:22px}
+.fl{position:absolute;right:22px;bottom:90px;z-index:3;font-size:28px;color:#FF4D6D;animation:fl 2.2s ease-out forwards}
+@keyframes fl{to{transform:translateY(-230px) scale(1.3);opacity:0}}
+
+.lg-logo{top:18px!important;left:18px!important;bottom:auto!important;right:auto!important}
+.bento{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:92px;gap:10px;padding:0 16px 14px}
+.bt{position:relative;border-radius:22px;overflow:hidden;padding:12px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;transition:.2s}
+.bt:hover{transform:translateY(-2px)}
+.bt b{font-size:14px;line-height:1.25;position:relative;z-index:2}.bt small{font-size:11px;opacity:.85;margin-top:2px;position:relative;z-index:2}
+.b-tr{grid-row:span 2;background:#2a1f5c}.b-tr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.b-tr:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,24,.1),rgba(8,6,24,.92))}
+.b-tr .bi{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+.b-gl{background:linear-gradient(135deg,#FF4D6D,#E11D48 60%,#7C3AED)}
+.b-wl{background:linear-gradient(135deg,#FFE29A,#FFB23E);color:#5b3a00}
+.b-hs{background:#fff;color:var(--ink);box-shadow:0 2px 10px rgba(20,20,50,.06)}
+.b-ct{background:linear-gradient(135deg,#6D4AFF,#3B82F6)}
+.bt i{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:12px;background:rgba(255,255,255,.25);display:grid;place-items:center;font-style:normal}
+.bt i svg{width:20px;height:20px}
+.b-ct>svg{position:absolute;top:10px;right:10px;width:26px;height:26px}
+.hv{display:flex;margin-top:8px}.hv img{width:30px;height:30px;border-radius:50%;object-fit:cover;border:2px solid #fff;margin-left:-8px}.hv img:first-child{margin-left:0}
+.cb2{grid-auto-rows:104px;gap:10px}
+.cb2 .ct{position:relative;overflow:hidden;min-height:0;border-radius:22px;padding:14px;color:#fff}
+.cb2 .ct .ctb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;mix-blend-mode:luminosity}
+.cb2 .ct:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.4))}
+.cb2 .ct b,.cb2 .ct small{position:relative;z-index:2}.cb2 .ct b{font-size:17px}
+.cb2 .k0{grid-row:span 2}.cb2 .k5{grid-column:span 2}
 </style>
 </head>
 <body oncontextmenu="return false">
 <div class="side">
   <div class="lg"><svg width="44" height="44" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#6D4AFF"/><path d="M24 18v28l22-14z" fill="#fff"/><circle cx="48" cy="16" r="5" fill="#EF4444"/></svg>Livora</div>
-  <p>Watch any live stream free for 30 seconds. Keep watching with tokens.</p>
+  <p>Live streaming where you pay only for the moments you love.</p>
   <button class="tl" onclick="openTools()">Demo tools</button>
 </div>
 <div class="phone"><div class="scr" id="scr">
@@ -248,6 +315,7 @@ down:'<path d="M12 5v14M19 12l-7 7-7-7"/>',
 bag:'<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>',
 lock:'<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
 out:'<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>',
+video:'<rect x="2" y="6" width="14" height="12" rx="3"/><path d="M22 8l-6 4 6 4z"/>',
 cog:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>'
 };
 const ic=(n,s)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"${s?` style="width:${s}px;height:${s}px"`:''}>${I[n]}</svg>`;
@@ -301,7 +369,8 @@ let R={route:DB.session?'home':'login',cat:'All',phone:'',q:'',loading:false};
 let P=null,offSim=false,pendingPack=null;
 
 function toast(msg,ok){const t=$('#toast');t.innerHTML=(ok?`<span style="color:#4ade80">${ic('check',16)}</span>`:'')+msg;t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),2400)}
-function go(r,o){R=Object.assign(R,{route:r},o||{});render()}
+let H=null,H_ms=null;
+function go(r,o){if(r!=='studio'&&H_ms&&!H){H_ms.getTracks().forEach(t=>t.stop());H_ms=null}R=Object.assign(R,{route:r},o||{});render()}
 function setClock(){const d=new Date();$('#clk').textContent=d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:false})}
 setClock();setInterval(setClock,30000);
 
@@ -309,8 +378,10 @@ setClock();setInterval(setClock,30000);
 const hdr=()=>{const u=U();return `<div class="hd"><div class="brand"><svg width="30" height="30" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#6D4AFF"/><path d="M24 18v28l22-14z" fill="#fff"/><circle cx="48" cy="16" r="5" fill="#EF4444"/></svg>Livora</div>
 <button class="ib" data-a="search">${ic('search')}</button><button class="ib" data-a="bell">${ic('bell')}<i class="dot"></i></button>
 <button class="tk" data-a="store">${coin(22)}<span class="balv">${u.bal}</span></button><img class="av" src="${av(1)}" data-a="profile" alt="Profile"></div>`};
-const nav=()=>`<div class="nav">${[['home','Home','home'],['explore','Explore','compass'],['cats','Categories','grid'],['wallet','Wallet','wallet'],['profile','Profile','user']].map(x=>`<button class="${R.route===x[0]?'on':''}" data-a="go" data-v="${x[0]}">${ic(x[2])}${x[1]}</button>`).join('')}</div>`;
-const card=s=>`<div class="card" data-a="open" data-v="${s.id}"><div class="th"><img src="${s.img}" alt="" loading="lazy" onerror="this.remove()"><span class="live">LIVE</span><span class="vw">${ic('eye')}${fmtV(s.v)}</span></div><div class="cb"><h3>${s.title}</h3><div class="cm"><img src="${av(s.a)}" alt=""><b>${s.host}</b><span class="cat">${s.cat}</span></div><button class="wb">Watch Live · 30s free</button></div></div>`;
+const nav=()=>`<div class="nav">${[['home','Home','home'],['explore','Explore','compass'],['studio','Go Live','video'],['wallet','Wallet','wallet'],['profile','Profile','user']].map(x=>`<button class="${x[0]==='studio'?'gl':R.route===x[0]?'on':''}" data-a="go" data-v="${x[0]}">${x[0]==='studio'?`<i>${ic(x[2])}</i>`:ic(x[2])}<span>${x[1]}</span></button>`).join('')}</div>`;
+const card=s=>`<div class="card" data-a="open" data-v="${s.id}"><div class="th"><img src="${s.img}" alt="" loading="lazy" onerror="this.remove()"><span class="live">LIVE</span><span class="vw">${ic('eye')}${fmtV(s.v)}</span></div><div class="cb"><h3>${s.title}</h3><div class="cm"><img src="${av(s.a)}" alt=""><b>${s.host}</b><span class="cat">${s.cat}</span></div><button class="wb">Watch Live</button></div></div>`;
+const bento=()=>{const u=U(),s=[...STREAMS].sort((x,y)=>y.v-x.v)[1],hs=[...new Set(STREAMS.map(x=>x.a))].slice(0,5);
+  return `<div class="bento"><div class="bt b-tr" data-a="open" data-v="${s.id}"><img src="${s.img}" alt="" onerror="this.remove()"><div class="bi"><span class="live">TRENDING</span><b>${s.title}</b><small>${fmtV(s.v)} watching</small></div></div><div class="bt b-gl" data-a="go" data-v="studio"><i>${ic('video')}</i><b>Go Live</b><small>Start your own stream</small></div><div class="bt b-wl" data-a="store"><i>${coin(30)}</i><b><span class="balv">${u.bal}</span> tokens</b><small>Tap to top up</small></div><div class="bt b-hs"><b>Top hosts</b><div class="hv">${hs.map(x=>`<img src="${av(x)}" alt="">`).join('')}</div></div><div class="bt b-ct" data-a="go" data-v="cats">${ic('grid')}<b>Categories</b><small>Browse all topics</small></div></div>`};
 const tx=t=>`<div class="tx"><div class="ti ${t.type}">${ic(t.type==='c'?'up':'down')}</div><div class="m"><b>${t.label}</b><small>${fmtD(t.t)}</small></div><div class="a ${t.type==='c'?'pos':'neg'}">${t.type==='c'?'+':'-'}${t.amt} Token${t.amt>1?'s':''}<small>${t.st}</small></div></div>`;
 const packsHtml=()=>`<div class="packs">${PACKS.map((k,i)=>`<div class="pk ${k.hot?'hot':''}">${k.hot?'<div class="badge">MOST POPULAR</div>':''}<div class="ci">${coin(54)}</div><div class="i"><b>${k.n} Tokens</b><small>${k.t} · ${k.n} min of viewing</small></div><button class="bn" data-a="buy" data-v="${i}">₹${k.p}</button></div>`).join('')}</div>`;
 
@@ -318,21 +389,21 @@ function render(){
   const b=$('#body');const r=R.route;const u=U();
   if(P&&r!=='player'){}
   $('#sbar').classList.toggle('dk',r==='player');
-  if(r==='login'){b.innerHTML=`<div class="lg-wrap"><div class="lg-hero"><img src="login.jpg" alt=""><div class="lg-logo"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div><span class="live">LIVE</span></div><h1>Watch live.<br>Pay only for what you love.</h1><p>Every stream is free for 30 seconds. Then continue with tokens.</p><div class="phf"><select id="cc"><option>+91</option><option>+971</option><option>+1</option><option>+44</option></select><input id="ph" type="tel" inputmode="numeric" maxlength="10" placeholder="Mobile number" value="${R.phone}"></div><div class="err" id="er"></div><button class="big" data-a="sendotp">Continue</button><div class="hint">Demo login · OTP is <b>123456</b></div></div>`;return}
+  if(r==='login'){b.innerHTML=`<div class="lg-wrap"><div class="lg-hero"><img src="login.jpg" alt=""><div class="lg-tags"><span>12.4K watching now</span><span>10 live streams</span></div><div class="lg-logo"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div><span class="live">LIVE</span></div><h1>Watch live.<br>Pay only for what you love.</h1><p>Jump into live streams the moment you open the app.</p><div class="phf"><select id="cc"><option>+91</option><option>+971</option><option>+1</option><option>+44</option></select><input id="ph" type="tel" inputmode="numeric" maxlength="10" placeholder="Mobile number" value="${R.phone}"></div><div class="err" id="er"></div><button class="big" data-a="sendotp">Continue</button><div class="hint">Demo login · OTP is <b>123456</b></div></div>`;return}
   if(r==='otp'){b.innerHTML=`<div class="lg-wrap"><div class="lg-hero" style="height:150px"><img src="login.jpg" alt=""></div><h1>Verify your number</h1><p>Enter the 6-digit code sent to +91 ${R.phone}.</p><input class="otp" id="otp" inputmode="numeric" maxlength="6" placeholder="······" autofocus><div class="err" id="er"></div><button class="big" data-a="verify">Verify &amp; Continue</button><div class="hint">Demo OTP: <b>123456</b></div></div>`;return}
   let html='';
   if(r==='home'){
     const list=STREAMS.filter(s=>R.cat==='All'||s.cat===R.cat);const f=STREAMS[0];
-    html=hdr()+`<div class="page" id="pg">`+(R.cat==='All'?`<div class="hero" data-a="open" data-v="${f.id}"><img src="${f.img}" alt="" onerror="this.remove()"><div class="in"><span class="live">LIVE NOW</span> <span class="vw">${ic('eye')}${fmtV(f.v)} watching</span><h2>${f.title}</h2><div class="hrow"><img src="${av(f.a)}" alt="">${f.host}</div><span class="cta">${ic('play')} Watch Live</span></div></div>`:'')+
+    html=hdr()+`<div class="page" id="pg">`+(R.cat==='All'?`<div class="hero" data-a="open" data-v="${f.id}"><img src="${f.img}" alt="" onerror="this.remove()"><div class="in"><span class="live">LIVE NOW</span> <span class="vw">${ic('eye')}${fmtV(f.v)} watching</span><h2>${f.title}</h2><div class="hrow"><img src="${av(f.a)}" alt="">${f.host}</div><span class="cta">${ic('play')} Watch Live</span></div></div>`:'')+(R.cat==='All'?bento():'')+
     `<div class="chips">${CATS.map(c=>`<button class="chip ${R.cat===c?'on':''}" data-a="cat" data-v="${c}">${c}</button>`).join('')}</div><div class="sec">${R.cat==='All'?'Live right now':R.cat}</div><div class="feed">`+
     (R.loading?'<div class="sk"></div><div class="sk"></div>':list.length?list.map(card).join(''):'<div class="empty">No live streams in this category right now.</div>')+`</div></div>`;
   }
   if(r==='explore'){
     const q=R.q.toLowerCase();const res=(q?STREAMS.filter(s=>(s.title+s.host+s.cat).toLowerCase().includes(q)):[...STREAMS].sort((a,b)=>b.v-a.v).slice(0,6));
-    html=hdr()+`<div class="page"><div class="srch">${ic('search')}<input id="q" placeholder="Search streams, hosts, topics" value="${R.q}" autocomplete="off"></div><div class="sec">${q?'Results':'Trending now'}</div><div class="feed" id="res">${res.length?res.map(card).join(''):'<div class="empty">No streams found. Try another keyword.</div>'}</div></div>`;
+    html=hdr()+`<div class="page"><div class="srch">${ic('search')}<input id="q" placeholder="Search streams, hosts, topics" value="${R.q}" autocomplete="off"></div><div class="sec">${q?'Results':'Trending now'}<button class="lnk" data-a="go" data-v="cats" style="font-size:13px">Categories</button></div><div class="feed" id="res">${res.length?res.map(card).join(''):'<div class="empty">No streams found. Try another keyword.</div>'}</div></div>`;
   }
   if(r==='cats'){
-    html=hdr()+`<div class="page"><div class="sec">Browse categories</div><div class="cgrid">${CATS.slice(1).map(c=>`<div class="ct" style="background:linear-gradient(135deg,${CC[c]},${CC[c]}bb)" data-a="cat2" data-v="${c}">${c}<small>${STREAMS.filter(s=>s.cat===c).length} live</small></div>`).join('')}</div></div>`;
+    html=hdr()+`<div class="page"><div class="sec">Browse categories</div><div class="cgrid cb2">${CATS.slice(1).map((c,i)=>{const s=STREAMS.find(x=>x.cat===c);return `<div class="ct k${i}" style="background:linear-gradient(135deg,${CC[c]},${CC[c]}99)" data-a="cat2" data-v="${c}">${s?`<img class="ctb" src="${s.img}" alt="" onerror="this.remove()">`:''}<b>${c}</b><small>${STREAMS.filter(x=>x.cat===c).length} live now</small></div>`}).join('')}</div></div>`;
   }
   if(r==='wallet'){
     html=hdr()+`<div class="page"><div class="wc"><div class="lb">Available tokens</div><div class="nm">${coin(38)}<span class="balv">${u.bal}</span></div><button class="wadd" data-a="store">+ Add Tokens</button></div><div class="st"><div>Total purchased<b class="pos">${u.bought}</b></div><div>Total consumed<b class="neg">${u.used}</b></div></div><div class="sec">Transaction history</div>${u.tx.length?u.tx.map(tx).join(''):`<div class="empty">No transactions yet.<br>Buy tokens or watch a stream to see activity here.</div>`}</div>`;
@@ -343,7 +414,8 @@ function render(){
   if(r==='profile'){
     html=hdr()+`<div class="page"><div class="pr"><img src="${av(1)}" alt=""><h2>${u.name}</h2><small>+91 ${u.phone}</small></div><button class="row" data-a="go" data-v="wallet">${coin(22)}Wallet balance<span><b class="balv">${u.bal}</b> tokens</span></button><button class="row" data-a="notif">${ic('bell',20)}Notifications<i class="tg ${R.notif?'on':''}"></i></button><button class="row" data-a="go" data-v="store">${ic('bag',20)}Buy tokens</button><button class="row">${ic('cog',20)}Account settings<span>English</span></button><button class="row" data-a="tools">${ic('cog',20)}Demo tools</button><button class="row out" data-a="logout">${ic('out',20)}Log out</button></div>`;
   }
-  b.innerHTML=html+nav();
+  if(r==='studio')html=hdr()+`<div class="page"><div class="stu"><div class="ph" style="padding:0 4px 12px"><h1>Go Live</h1><p>Set up your stream and start broadcasting to viewers.</p></div><div class="cam" id="cam"><div class="ph0" id="cam0"><div><img src="${av(1)}" alt=""><br>Camera preview</div></div></div><input id="lt" maxlength="60" placeholder="Give your stream a title" value="${R.lt||''}"><div class="chips" style="padding:10px 0 4px">${CATS.slice(1).map(c=>`<button class="chip ${(R.lc||'Education')===c?'on':''}" data-a="lcat" data-v="${c}">${c}</button>`).join('')}</div><button class="big" data-a="golive">Start Live</button><div class="hint">Your camera stays on your device in this demo.</div></div></div>`;
+  b.innerHTML=html+nav();if(r==='studio')startCam();
   const q=$('#q');if(q){q.focus();q.setSelectionRange(q.value.length,q.value.length)}
 }
 
@@ -382,10 +454,10 @@ function openStream(id){
   <div class="vt"><button class="ib" data-a="exit">${ic('back')}</button><span class="live">LIVE</span><span class="vw">${ic('eye')}${fmtV(s.v)}</span><button class="tk" data-a="pstore">${coin(20)}<span class="balv">${U().bal}</span></button><button class="ib" data-a="fs">${ic('max')}</button></div>
   <div class="off hid" id="off">${ic('wifi')}Connection lost · billing paused</div>
   <div class="pc hid" id="pc"></div><button class="pp" id="pp" data-a="pp">${ic('pause')}</button>
-  <div class="pw" id="pw"><div class="pwc"><h3>Your Free Preview Has Ended</h3><p>Continue watching this live stream with tokens.</p><div class="bal0">${coin(20)} Current balance: <b class="balv">0</b></div><button class="big" data-a="pstore">Buy Tokens to Continue</button><button class="ghost" data-a="exit">Maybe Later</button></div></div>
+  <div class="pw" id="pw"><div class="pwc"><h3>Keep the stream going</h3><p>Add tokens to continue. You only pay for the minutes you watch.</p><div class="bal0">${coin(20)} Current balance: <b class="balv">0</b></div><button class="big" data-a="pstore">Buy Tokens to Continue</button><button class="ghost" data-a="exit">Maybe Later</button></div></div>
   <div class="er hid" id="er2"><div>This stream could not be loaded.<br>Check your connection and try again.</div><button data-a="retry">Retry</button></div></div>
   <div class="pi"><h2>${s.title}</h2><div class="ph2"><img src="${av(s.a)}" alt=""><div><b>${s.host}</b><small>${s.cat} · ${fmtV(s.v)} watching</small></div></div><div style="color:#c9cddb;font-size:13.5px;line-height:1.5">${s.desc}</div>
-  <div class="rate"><div>Free preview<b>30 seconds</b></div><div>Then<b>1 token / min</b></div></div><div class="sec" style="padding:8px 0;font-size:15px">Up next</div>${STREAMS.filter(x=>x.id!==id).slice(0,3).map(x=>`<div class="un" data-a="swap" data-v="${x.id}"><img src="${x.img}" alt="" onerror="this.remove()"><div><b>${x.title}</b><small>${x.host} · ${fmtV(x.v)}</small></div></div>`).join('')}</div>`;
+  <div class="rate"><div>Start<b>Instantly free</b></div><div>Keep watching<b>1 token / min</b></div></div><div class="sec" style="padding:8px 0;font-size:15px">Up next</div>${STREAMS.filter(x=>x.id!==id).slice(0,3).map(x=>`<div class="un" data-a="swap" data-v="${x.id}"><img src="${x.img}" alt="" onerror="this.remove()"><div><b>${x.title}</b><small>${x.host} · ${fmtV(x.v)}</small></div></div>`).join('')}</div>`;
   $('#body').appendChild(pl);$('#sbar').classList.add('dk');
   ytLoad(()=>{if(!P||P.s!==s)return;P.yt=new YT.Player('vid',{videoId:s.yt,host:'https://www.youtube-nocookie.com',playerVars:{autoplay:1,controls:0,disablekb:1,fs:0,modestbranding:1,rel:0,playsinline:1,iv_load_policy:3,origin:location.origin},events:{onReady:ytReadyEv,onStateChange:ytState,onError:()=>{if(P){P.err=true;P.playing=false;$('#er2').classList.remove('hid')}}}})});
   if(P.left===0)afterPreview(); else updChip();
@@ -396,7 +468,7 @@ function updChip(){
   const c=$('#pc');if(!c||!P)return;
   if(P.locked){c.classList.add('hid');return}
   c.classList.remove('hid','fr','pm');
-  if(P.left>0){c.classList.add('fr');c.innerHTML=`<i></i><div>FREE PREVIEW<br><b>${fmtT(P.left)}</b> remaining</div>`}
+  if(P.left>0){c.classList.add('fr');c.innerHTML=`<i></i><div>Free to watch<br><b>${fmtT(P.left)}</b> left</div>`}
   else if(P.access){c.classList.add('pm');c.innerHTML=`<i></i><div>Premium Viewing Active<br><small style="opacity:.8">Next token in ${fmtT(RATE-P.paid)}</small></div>`}
   else c.classList.add('hid');
 }
@@ -440,13 +512,45 @@ function syncBal(pop){
 addEventListener('storage',e=>{if(e.key!==KEY)return;DB=load();if(!DB.session&&R.route!=='login'){exitStreamSilent();go('login');return}if(!DB.session)return;syncBal(true);afterWalletChange();if(!P&&['wallet','profile'].includes(R.route))render()});
 function exitStreamSilent(){clearInterval(openStream.t);try{P&&P.yt&&P.yt.destroy()}catch(e){}P=null;const pl=$('#pl');if(pl)pl.remove()}
 
+/* ---------- go live (host) ---------- */
+async function startCam(){try{if(!H_ms)H_ms=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'}});const c=$('#cam');if(!c)return;const v=document.createElement('video');v.muted=true;v.playsInline=true;v.autoplay=true;v.srcObject=H_ms;c.appendChild(v);const p=$('#cam0');if(p)p.remove()}catch(e){}}
+const HN=['Riya','Kabir','Neha','Arjun','Sana','Vikram','Isha','Rohan','Priya','Dev'],HM=['Looking great!','Hello from Delhi','Audio is crystal clear','Love this stream','Can you say hi to me?','Sent you a gift','First time here, amazing','Please talk about pricing','Awesome content','Following you now'];
+function goLive(){
+  const lt=$('#lt');R.lt=(lt&&lt.value.trim())||'My first live stream';
+  H={t:R.lt,c:R.lc||'Education',sec:0,v:1,e:0,pk:1};
+  const hl=document.createElement('div');hl.id='hl';
+  hl.innerHTML=`<div class="fb"><img src="${av(1)}" alt=""></div><div class="sc"></div><div class="ht"><span class="live">LIVE</span><span class="vw" id="hT">0:00</span><span class="vw">${ic('eye')}<b id="hV">1</b></span><span class="tk" style="margin-left:auto;height:34px">${coin(18)}<span id="hE">0</span></span></div><div class="hti">${H.t}</div><div class="hch" id="hc"></div><div class="hb"><button class="rb" data-a="hflip">${ic('video')}</button><button class="end" data-a="endlive">End Live</button></div>`;
+  $('#body').appendChild(hl);
+  if(H_ms){const v=document.createElement('video');v.muted=true;v.playsInline=true;v.autoplay=true;v.srcObject=H_ms;hl.insertBefore(v,hl.querySelector('.sc'))}
+  $('#sbar').classList.add('dk');toast('You are live',1);
+  H.i=setInterval(hTick,1000);
+}
+function hTick(){
+  if(!H)return;H.sec++;H.v=Math.max(1,H.v+Math.round(Math.random()*5-(H.sec<25?0:1.5))+(H.sec<6?2:0));H.pk=Math.max(H.pk,H.v);
+  $('#hT').textContent=fmtT(H.sec);$('#hV').textContent=fmtV(H.v);
+  if(H.sec%2===0){const c=$('#hc');const d=document.createElement('div');d.innerHTML=`<b>${HN[Math.floor(Math.random()*HN.length)]}</b> ${HM[Math.floor(Math.random()*HM.length)]}`;c.appendChild(d);while(c.children.length>6)c.firstChild.remove()}
+  if(H.sec%6===0){H.e+=1+Math.floor(Math.random()*3);$('#hE').textContent=H.e;const f=document.createElement('div');f.className='fl';f.textContent='\u2764';$('#hl').appendChild(f);setTimeout(()=>f.remove(),2300)}
+}
+function endLive(){
+  if(!H)return;clearInterval(H.i);const h=H;H=null;
+  if(H_ms){H_ms.getTracks().forEach(t=>t.stop());H_ms=null}
+  const hl=$('#hl');if(hl)hl.remove();$('#sbar').classList.remove('dk');
+  if(h.e>0){DB=load();const u=U();u.bal+=h.e;u.tx.unshift({id:uid(),type:'c',amt:h.e,label:'Live earnings · '+h.t,t:Date.now(),st:'Earned'});save();syncBal(true)}
+  sheet(`<div class="ph"><h1>Stream ended</h1><p>Nice work. Here is how your live went.</p></div><div class="st"><div>Duration<b>${fmtT(h.sec)}</b></div><div>Peak viewers<b>${fmtV(h.pk)}</b></div></div><div class="st" style="padding-top:0"><div>Tokens earned<b class="pos">${h.e}</b></div><div>Category<b style="font-size:16px">${h.c}</b></div></div><div style="padding:0 16px"><button class="big" data-a="hdone" style="margin-top:4px">Done</button></div>`);
+}
+
 /* ---------- events ---------- */
 document.addEventListener('click',e=>{
   const el=e.target.closest('[data-a]');if(!el)return;const a=el.dataset.a,v=el.dataset.v;
   switch(a){
+    case'lcat':{const lt=$('#lt');if(lt)R.lt=lt.value;R.lc=v;render();break}
+    case'golive':goLive();break;
+    case'endlive':endLive();break;
+    case'hflip':toast('Camera switched');break;
+    case'hdone':closeOv();go('home');break;
     case'go':go(v);break;
     case'search':go('explore');break;
-    case'bell':sheet(`<div class="ph"><h1>Notifications</h1></div><div class="ni"><div>${coin(26)}</div><div><b>Welcome to Livora</b><small>Every live stream is free for the first 30 seconds.</small></div></div><div class="ni"><div>${ic('eye',24)}</div><div><b>10 streams are live</b><small>Pick a category and start watching.</small></div></div><button class="ghost" data-a="close">Close</button>`);break;
+    case'bell':sheet(`<div class="ph"><h1>Notifications</h1></div><div class="ni"><div>${coin(26)}</div><div><b>Welcome to Livora</b><small>Jump into any live stream, or go live yourself.</small></div></div><div class="ni"><div>${ic('eye',24)}</div><div><b>10 streams are live</b><small>Pick a category and start watching.</small></div></div><button class="ghost" data-a="close">Close</button>`);break;
     case'cat':R.cat=v;render();break;
     case'cat2':R.cat=v;go('home');break;
     case'open':R.prevRoute=R.route;openStream(v);break;
@@ -476,8 +580,9 @@ document.addEventListener('click',e=>{
   }
 });
 document.addEventListener('input',e=>{if(e.target.id==='q'){R.q=e.target.value;const q=R.q.toLowerCase();const res=q?STREAMS.filter(s=>(s.title+s.host+s.cat).toLowerCase().includes(q)):[...STREAMS].sort((a,b)=>b.v-a.v).slice(0,6);$('#res').innerHTML=res.length?res.map(card).join(''):'<div class="empty">No streams found. Try another keyword.</div>'}});
-document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='ph')document.querySelector('[data-a=sendotp]').click();if(e.key==='Enter'&&e.target.id==='otp')document.querySelector('[data-a=verify]').click();if((e.ctrlKey||e.metaKey)&&['u','s'].includes(e.key.toLowerCase())||e.key==='F12')e.preventDefault()});
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='ph')document.querySelector('[data-a=sendotp]').click();if(e.key==='Enter'&&e.target.id==='otp')document.querySelector('[data-a=verify]').click();if((e.ctrlKey||e.metaKey)&&['u','s'].includes(e.key.toLowerCase())||e.key==='F12'||((e.ctrlKey||e.metaKey)&&e.shiftKey&&['i','j','c'].includes(e.key.toLowerCase())))e.preventDefault()});
 addEventListener('online',()=>toast('Back online'));addEventListener('offline',()=>toast('You are offline'));
+document.addEventListener('contextmenu',e=>e.preventDefault());document.addEventListener('dragstart',e=>e.preventDefault());
 render();
 </script>
 </body>
